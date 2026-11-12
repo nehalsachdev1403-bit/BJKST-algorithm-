@@ -1,18 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Nov 11 02:36:48 2026
-
-@author: Manvi
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 30 15:39:09 2026
-
-@author: Manvi
-"""
-
-# BJKST Algorithm 1 -- counting distinct IP addresses in a big stream
+# BJKST Algorithm  -- counting distinct IP addresses in a big stream
 import random
 import time
 
@@ -69,7 +55,7 @@ visitors = [random_ip() for i in range(50000)]          # 50,000 different visit
 stream = [random.choice(visitors) for i in range(1000000)]   # 1,000,000 visits
 
 true_d = len(set(stream))             # exact answer (needs lots of memory!)
-k = 10                                # we keep only 10 numbers (or 1000)
+k = 1000                                # we keep only 1000 numbers (value of k can be changed to test for different experiment scenarios)
 
 print("Stream length    :", len(stream))
 print("True distinct d :", true_d)
